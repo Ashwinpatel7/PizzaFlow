@@ -45,8 +45,8 @@ function SignInContent() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-sm w-full space-y-8 p-8">
         <div className="text-center">
-          <div className="mx-auto h-20 w-20 bg-orange-500 rounded-full flex items-center justify-center mb-8">
-            <span className="text-white text-3xl">🍕</span>
+          <div className="mx-auto h-20 w-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
+            <span className="text-4xl">🟠🍕</span>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             PizzaFlow

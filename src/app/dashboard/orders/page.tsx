@@ -111,25 +111,40 @@ export default function OrdersPage() {
       <div className="bg-white shadow rounded-lg p-6">
         <h3 className="text-lg font-medium text-gray-900 mb-4">Order Status Guide</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <div className="flex items-center space-x-2">
-            <StatusBadge status="Pending" size="sm" />
-            <span className="text-xs text-gray-600">Awaiting preparation</span>
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-amber-50 border border-amber-200">
+            <span className="text-2xl">🟡🍕</span>
+            <div>
+              <StatusBadge status="Pending" size="sm" showDot={false} />
+              <p className="text-xs text-gray-600 mt-1">Awaiting preparation</p>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <StatusBadge status="Preparing" size="sm" />
-            <span className="text-xs text-gray-600">Being made</span>
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-blue-50 border border-blue-200">
+            <span className="text-2xl">🔵🍕</span>
+            <div>
+              <StatusBadge status="Preparing" size="sm" showDot={false} />
+              <p className="text-xs text-gray-600 mt-1">Being made</p>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <StatusBadge status="Out for Delivery" size="sm" />
-            <span className="text-xs text-gray-600">On the way</span>
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-purple-50 border border-purple-200">
+            <span className="text-2xl">🟣🍕</span>
+            <div>
+              <StatusBadge status="Out for Delivery" size="sm" showDot={false} />
+              <p className="text-xs text-gray-600 mt-1">On the way</p>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <StatusBadge status="Delivered" size="sm" />
-            <span className="text-xs text-gray-600">Completed</span>
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-emerald-50 border border-emerald-200">
+            <span className="text-2xl">🟢🍕</span>
+            <div>
+              <StatusBadge status="Delivered" size="sm" showDot={false} />
+              <p className="text-xs text-gray-600 mt-1">Completed</p>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <StatusBadge status="Cancelled" size="sm" />
-            <span className="text-xs text-gray-600">Order cancelled</span>
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-red-50 border border-red-200">
+            <span className="text-2xl">🔴🍕</span>
+            <div>
+              <StatusBadge status="Cancelled" size="sm" showDot={false} />
+              <p className="text-xs text-gray-600 mt-1">Order cancelled</p>
+            </div>
           </div>
         </div>
       </div>

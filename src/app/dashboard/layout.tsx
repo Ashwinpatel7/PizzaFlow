@@ -56,8 +56,8 @@ function DashboardContent({
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <div className="h-8 w-8 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">🍕</span>
+                <div className="h-8 w-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center shadow-md">
+                  <span className="text-lg">🟠🍕</span>
                 </div>
                 <span className="ml-2 text-xl font-bold text-gray-900">PizzaFlow</span>
               </div>
