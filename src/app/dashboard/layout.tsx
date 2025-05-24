@@ -19,17 +19,16 @@ function DashboardContent({
   useEffect(() => {
     if (status === "loading") return;
 
-    // Allow demo mode - don't redirect if no session
+    if (!session) {
+      router.push("/auth/signin");
+      return;
+    }
+
     setIsLoading(false);
   }, [session, status, router]);
 
   const handleSignOut = async () => {
-    if (session) {
-      await signOut({ callbackUrl: "/auth/signin" });
-    } else {
-      // Demo mode - just redirect to sign in
-      router.push("/auth/signin");
-    }
+    await signOut({ callbackUrl: "/auth/signin" });
   };
 
   if (isLoading || status === "loading") {
@@ -40,12 +39,9 @@ function DashboardContent({
     );
   }
 
-  // Demo mode: show demo user if no session
-  const displayUser = session?.user || {
-    name: "Demo User",
-    email: "demo@example.com",
-    image: null
-  };
+  if (!session) {
+    return null;
+  }
 
   const navigation = [
     { name: "Welcome", href: "/dashboard", current: pathname === "/dashboard" },
@@ -85,33 +81,28 @@ function DashboardContent({
               <div className="flex-shrink-0">
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2">
-                    {displayUser.image ? (
+                    {session.user?.image ? (
                       <img
                         className="h-8 w-8 rounded-full"
-                        src={displayUser.image}
-                        alt={displayUser.name || "User"}
+                        src={session.user.image}
+                        alt={session.user.name || "User"}
                       />
                     ) : (
                       <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
                         <span className="text-white text-sm font-medium">
-                          {displayUser.name?.charAt(0) || "U"}
+                          {session.user?.name?.charAt(0) || "U"}
                         </span>
                       </div>
                     )}
                     <span className="text-sm font-medium text-gray-700">
-                      {displayUser.name}
+                      {session.user?.name}
                     </span>
-                    {!session && (
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                        Demo
-                      </span>
-                    )}
                   </div>
                   <button
                     onClick={handleSignOut}
                     className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
-                    {session ? "Sign Out" : "Exit Demo"}
+                    Sign Out
                   </button>
                 </div>
               </div>

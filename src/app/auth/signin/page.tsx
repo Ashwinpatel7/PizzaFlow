@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 function SignInContent() {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
   // Check if Google OAuth is configured
@@ -22,17 +23,22 @@ function SignInContent() {
 
   const handleGoogleSignIn = async () => {
     setIsLoading(true);
+    setError(null);
+
     try {
       const result = await signIn("google", {
         callbackUrl: "/dashboard",
         redirect: false,
       });
 
-      if (result?.ok) {
+      if (result?.error) {
+        setError("Authentication failed. Please try again.");
+      } else if (result?.ok) {
         router.push("/dashboard");
       }
     } catch (error) {
       console.error("Sign in error:", error);
+      setError("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -54,6 +60,27 @@ function SignInContent() {
         </div>
 
         <div className="mt-8 space-y-6">
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-md p-4">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-red-800">
+                    Authentication Error
+                  </h3>
+                  <div className="mt-2 text-sm text-red-700">
+                    <p>{error}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Configuration Notice */}
           <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
             <div className="flex">
@@ -115,31 +142,7 @@ function SignInContent() {
             )}
           </button>
 
-          {/* Demo Mode Button */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-gradient-to-br from-orange-50 to-red-50 text-gray-500">Or for demo purposes</span>
-            </div>
-          </div>
 
-          <button
-            onClick={() => router.push("/dashboard")}
-            className="w-full flex justify-center py-3 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-colors"
-          >
-            <div className="flex items-center">
-              <span className="text-lg mr-2">🎭</span>
-              View Demo Dashboard
-            </div>
-          </button>
-
-          <div className="text-center">
-            <p className="text-xs text-gray-500">
-              Demo mode allows you to explore the dashboard without authentication
-            </p>
-          </div>
         </div>
       </div>
     </div>

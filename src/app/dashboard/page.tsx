@@ -7,11 +7,9 @@ import { StatusBadge } from "@/app/components/StatusBadge";
 function DashboardContent() {
   const { data: session } = useSession();
 
-  // Demo mode: show demo user if no session
-  const displayUser = session?.user || {
-    name: "Demo User",
-    email: "demo@example.com"
-  };
+  if (!session) {
+    return null;
+  }
 
   return (
     <div className="space-y-6">
@@ -30,12 +28,7 @@ function DashboardContent() {
                   Welcome back
                 </dt>
                 <dd className="text-2xl font-bold text-gray-900">
-                  Hello, {displayUser.name}!
-                  {!session && (
-                    <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-2">
-                      Demo Mode
-                    </span>
-                  )}
+                  Hello, {session.user?.name}!
                 </dd>
               </dl>
             </div>
