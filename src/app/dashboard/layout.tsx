@@ -82,11 +82,11 @@ function DashboardContent({
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2">
                     {session.user?.image ? (
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src={session.user.image}
-                        alt={session.user.name || "User"}
-                      />
+                      <div className="h-8 w-8 rounded-full bg-gray-300 flex items-center justify-center">
+                        <span className="text-sm font-medium text-gray-700">
+                          {session.user?.name?.charAt(0) || 'U'}
+                        </span>
+                      </div>
                     ) : (
                       <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
                         <span className="text-white text-sm font-medium">
