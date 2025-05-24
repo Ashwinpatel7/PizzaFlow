@@ -238,42 +238,42 @@ export const getStatusConfig = (status: PizzaOrder['status']) => {
   switch (status) {
     case 'Pending':
       return {
-        color: 'bg-amber-100 text-amber-800 border-amber-200',
+        color: 'bg-amber-500 text-white border-amber-600',
         icon: '⏳',
         dotColor: 'bg-amber-400',
         pizzaIcon: '🟡🍕' // Yellow pizza for pending
       };
     case 'Preparing':
       return {
-        color: 'bg-blue-100 text-blue-800 border-blue-200',
+        color: 'bg-blue-500 text-white border-blue-600',
         icon: '👨‍🍳',
         dotColor: 'bg-blue-400',
         pizzaIcon: '🔵🍕' // Blue pizza for preparing
       };
     case 'Out for Delivery':
       return {
-        color: 'bg-purple-100 text-purple-800 border-purple-200',
+        color: 'bg-purple-500 text-white border-purple-600',
         icon: '🚚',
         dotColor: 'bg-purple-400',
         pizzaIcon: '🟣🍕' // Purple pizza for delivery
       };
     case 'Delivered':
       return {
-        color: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+        color: 'bg-emerald-500 text-white border-emerald-600',
         icon: '✅',
         dotColor: 'bg-emerald-400',
         pizzaIcon: '🟢🍕' // Green pizza for delivered
       };
     case 'Cancelled':
       return {
-        color: 'bg-red-100 text-red-800 border-red-200',
+        color: 'bg-red-500 text-white border-red-600',
         icon: '❌',
         dotColor: 'bg-red-400',
         pizzaIcon: '🔴🍕' // Red pizza for cancelled
       };
     default:
       return {
-        color: 'bg-gray-100 text-gray-800 border-gray-200',
+        color: 'bg-gray-500 text-white border-gray-600',
         icon: '❓',
         dotColor: 'bg-gray-400',
         pizzaIcon: '⚪🍕' // Gray pizza for unknown

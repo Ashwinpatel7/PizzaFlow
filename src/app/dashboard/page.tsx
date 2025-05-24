@@ -126,30 +126,30 @@ function DashboardContent() {
             Order Status Overview
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            <div className="text-center p-4 rounded-lg bg-amber-50 border border-amber-200">
+            <div className="text-center p-4 rounded-lg bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">🟡🍕</div>
               <StatusBadge status="Pending" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">5 orders</p>
+              <p className="text-sm font-medium text-gray-700 mt-1">5 orders</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-blue-50 border border-blue-200">
+            <div className="text-center p-4 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">🔵🍕</div>
               <StatusBadge status="Preparing" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">6 orders</p>
+              <p className="text-sm font-medium text-gray-700 mt-1">6 orders</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-purple-50 border border-purple-200">
+            <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">🟣🍕</div>
               <StatusBadge status="Out for Delivery" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">6 orders</p>
+              <p className="text-sm font-medium text-gray-700 mt-1">6 orders</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-emerald-50 border border-emerald-200">
+            <div className="text-center p-4 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">🟢🍕</div>
               <StatusBadge status="Delivered" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">9 orders</p>
+              <p className="text-sm font-medium text-gray-700 mt-1">9 orders</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-red-50 border border-red-200">
+            <div className="text-center p-4 rounded-lg bg-gradient-to-br from-red-50 to-red-100 border border-red-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">🔴🍕</div>
               <StatusBadge status="Cancelled" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">2 orders</p>
+              <p className="text-sm font-medium text-gray-700 mt-1">2 orders</p>
             </div>
           </div>
         </div>

@@ -111,39 +111,39 @@ export default function OrdersPage() {
       <div className="bg-white shadow rounded-lg p-6">
         <h3 className="text-lg font-medium text-gray-900 mb-4">Order Status Guide</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <div className="flex items-center space-x-2 p-3 rounded-lg bg-amber-50 border border-amber-200">
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-300 shadow-sm hover:shadow-md transition-shadow">
             <span className="text-2xl">🟡🍕</span>
             <div>
               <StatusBadge status="Pending" size="sm" showDot={false} />
-              <p className="text-xs text-gray-600 mt-1">Awaiting preparation</p>
+              <p className="text-xs font-medium text-gray-700 mt-1">Awaiting preparation</p>
             </div>
           </div>
-          <div className="flex items-center space-x-2 p-3 rounded-lg bg-blue-50 border border-blue-200">
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 shadow-sm hover:shadow-md transition-shadow">
             <span className="text-2xl">🔵🍕</span>
             <div>
               <StatusBadge status="Preparing" size="sm" showDot={false} />
-              <p className="text-xs text-gray-600 mt-1">Being made</p>
+              <p className="text-xs font-medium text-gray-700 mt-1">Being made</p>
             </div>
           </div>
-          <div className="flex items-center space-x-2 p-3 rounded-lg bg-purple-50 border border-purple-200">
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-300 shadow-sm hover:shadow-md transition-shadow">
             <span className="text-2xl">🟣🍕</span>
             <div>
               <StatusBadge status="Out for Delivery" size="sm" showDot={false} />
-              <p className="text-xs text-gray-600 mt-1">On the way</p>
+              <p className="text-xs font-medium text-gray-700 mt-1">On the way</p>
             </div>
           </div>
-          <div className="flex items-center space-x-2 p-3 rounded-lg bg-emerald-50 border border-emerald-200">
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-300 shadow-sm hover:shadow-md transition-shadow">
             <span className="text-2xl">🟢🍕</span>
             <div>
               <StatusBadge status="Delivered" size="sm" showDot={false} />
-              <p className="text-xs text-gray-600 mt-1">Completed</p>
+              <p className="text-xs font-medium text-gray-700 mt-1">Completed</p>
             </div>
           </div>
-          <div className="flex items-center space-x-2 p-3 rounded-lg bg-red-50 border border-red-200">
+          <div className="flex items-center space-x-2 p-3 rounded-lg bg-gradient-to-br from-red-50 to-red-100 border border-red-300 shadow-sm hover:shadow-md transition-shadow">
             <span className="text-2xl">🔴🍕</span>
             <div>
               <StatusBadge status="Cancelled" size="sm" showDot={false} />
-              <p className="text-xs text-gray-600 mt-1">Order cancelled</p>
+              <p className="text-xs font-medium text-gray-700 mt-1">Order cancelled</p>
             </div>
           </div>
         </div>
