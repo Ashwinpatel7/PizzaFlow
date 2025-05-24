@@ -2,6 +2,9 @@
 
 A modern, responsive pizza order management dashboard built with Next.js, TypeScript, Tailwind CSS, and NextAuth.js for Google OAuth authentication.
 
+**Developer**: Ashwin Patel
+**Location**: India 🇮🇳
+
 ## 🚀 Features
 
 - **Google OAuth Authentication**: Secure login using Google accounts

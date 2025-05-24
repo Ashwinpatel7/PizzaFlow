@@ -10,7 +10,7 @@ export interface PizzaOrder {
 export const mockPizzaOrders: PizzaOrder[] = [
   {
     id: "PZA001",
-    customerName: "John Doe",
+    customerName: "Arjun Sharma",
     pizzaType: "Margherita",
     quantity: 2,
     orderDate: "2024-01-15 14:30",
@@ -18,7 +18,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA002",
-    customerName: "Jane Smith",
+    customerName: "Priya Patel",
     pizzaType: "Pepperoni",
     quantity: 1,
     orderDate: "2024-01-15 15:45",
@@ -26,7 +26,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA003",
-    customerName: "Mike Johnson",
+    customerName: "Vikram Singh",
     pizzaType: "Veggie Supreme",
     quantity: 3,
     orderDate: "2024-01-15 16:20",
@@ -34,23 +34,23 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA004",
-    customerName: "Sarah Wilson",
-    pizzaType: "Hawaiian",
+    customerName: "Ananya Gupta",
+    pizzaType: "Paneer Tikka",
     quantity: 1,
     orderDate: "2024-01-15 17:10",
     status: "Pending"
   },
   {
     id: "PZA005",
-    customerName: "David Brown",
-    pizzaType: "Meat Lovers",
+    customerName: "Rohit Kumar",
+    pizzaType: "Chicken Tandoori",
     quantity: 2,
     orderDate: "2024-01-15 18:00",
     status: "Delivered"
   },
   {
     id: "PZA006",
-    customerName: "Emily Davis",
+    customerName: "Sneha Reddy",
     pizzaType: "BBQ Chicken",
     quantity: 1,
     orderDate: "2024-01-15 18:30",
@@ -58,7 +58,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA007",
-    customerName: "Chris Miller",
+    customerName: "Karan Mehta",
     pizzaType: "Four Cheese",
     quantity: 2,
     orderDate: "2024-01-15 19:15",
@@ -66,7 +66,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA008",
-    customerName: "Lisa Anderson",
+    customerName: "Kavya Iyer",
     pizzaType: "Margherita",
     quantity: 1,
     orderDate: "2024-01-15 19:45",
@@ -74,7 +74,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA009",
-    customerName: "Tom Garcia",
+    customerName: "Aditya Joshi",
     pizzaType: "Pepperoni",
     quantity: 3,
     orderDate: "2024-01-15 20:20",
@@ -82,7 +82,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA010",
-    customerName: "Anna Martinez",
+    customerName: "Riya Agarwal",
     pizzaType: "Veggie Supreme",
     quantity: 1,
     orderDate: "2024-01-15 20:50",
@@ -90,31 +90,31 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA011",
-    customerName: "Robert Taylor",
-    pizzaType: "Supreme",
+    customerName: "Siddharth Rao",
+    pizzaType: "Chicken Keema",
     quantity: 2,
     orderDate: "2024-01-16 12:15",
     status: "Delivered"
   },
   {
     id: "PZA012",
-    customerName: "Jennifer White",
-    pizzaType: "Hawaiian",
+    customerName: "Pooja Nair",
+    pizzaType: "Paneer Makhani",
     quantity: 1,
     orderDate: "2024-01-16 13:30",
     status: "Preparing"
   },
   {
     id: "PZA013",
-    customerName: "Kevin Lee",
-    pizzaType: "Meat Lovers",
+    customerName: "Aryan Malhotra",
+    pizzaType: "Chicken Tikka",
     quantity: 2,
     orderDate: "2024-01-16 14:45",
     status: "Pending"
   },
   {
     id: "PZA014",
-    customerName: "Michelle Clark",
+    customerName: "Ishita Bansal",
     pizzaType: "BBQ Chicken",
     quantity: 1,
     orderDate: "2024-01-16 15:20",
@@ -122,7 +122,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA015",
-    customerName: "James Rodriguez",
+    customerName: "Nikhil Verma",
     pizzaType: "Four Cheese",
     quantity: 3,
     orderDate: "2024-01-16 16:10",
@@ -130,7 +130,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA016",
-    customerName: "Amanda Lewis",
+    customerName: "Shreya Kapoor",
     pizzaType: "Margherita",
     quantity: 1,
     orderDate: "2024-01-16 17:00",
@@ -138,7 +138,7 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA017",
-    customerName: "Daniel Walker",
+    customerName: "Varun Chopra",
     pizzaType: "Pepperoni",
     quantity: 2,
     orderDate: "2024-01-16 18:15",
@@ -146,39 +146,39 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA018",
-    customerName: "Nicole Hall",
-    pizzaType: "Veggie Supreme",
+    customerName: "Divya Sinha",
+    pizzaType: "Veggie Delight",
     quantity: 1,
     orderDate: "2024-01-16 19:30",
     status: "Delivered"
   },
   {
     id: "PZA019",
-    customerName: "Ryan Young",
-    pizzaType: "Supreme",
+    customerName: "Akash Tiwari",
+    pizzaType: "Chicken Dominator",
     quantity: 2,
     orderDate: "2024-01-16 20:00",
     status: "Out for Delivery"
   },
   {
     id: "PZA020",
-    customerName: "Stephanie King",
-    pizzaType: "Hawaiian",
+    customerName: "Meera Saxena",
+    pizzaType: "Paneer Tikka",
     quantity: 1,
     orderDate: "2024-01-16 20:45",
     status: "Cancelled"
   },
   {
     id: "PZA021",
-    customerName: "Mark Wright",
-    pizzaType: "Meat Lovers",
+    customerName: "Rahul Bhardwaj",
+    pizzaType: "Chicken Tandoori",
     quantity: 3,
     orderDate: "2024-01-17 11:30",
     status: "Delivered"
   },
   {
     id: "PZA022",
-    customerName: "Rachel Green",
+    customerName: "Nisha Aggarwal",
     pizzaType: "BBQ Chicken",
     quantity: 1,
     orderDate: "2024-01-17 12:45",
@@ -186,18 +186,50 @@ export const mockPizzaOrders: PizzaOrder[] = [
   },
   {
     id: "PZA023",
-    customerName: "Brian Scott",
-    pizzaType: "Four Cheese",
+    customerName: "Harsh Goyal",
+    pizzaType: "Cheese Burst",
     quantity: 2,
     orderDate: "2024-01-17 13:20",
     status: "Pending"
   },
   {
     id: "PZA024",
-    customerName: "Laura Adams",
+    customerName: "Tanvi Mishra",
     pizzaType: "Margherita",
     quantity: 1,
     orderDate: "2024-01-17 14:10",
+    status: "Out for Delivery"
+  },
+  {
+    id: "PZA025",
+    customerName: "Rajesh Khanna",
+    pizzaType: "Achari Paneer",
+    quantity: 2,
+    orderDate: "2024-01-17 15:30",
+    status: "Preparing"
+  },
+  {
+    id: "PZA026",
+    customerName: "Deepika Sharma",
+    pizzaType: "Butter Chicken",
+    quantity: 1,
+    orderDate: "2024-01-17 16:45",
+    status: "Delivered"
+  },
+  {
+    id: "PZA027",
+    customerName: "Amit Agrawal",
+    pizzaType: "Spicy Chicken Tikka",
+    quantity: 3,
+    orderDate: "2024-01-17 17:20",
+    status: "Pending"
+  },
+  {
+    id: "PZA028",
+    customerName: "Sunita Devi",
+    pizzaType: "Paneer Makhani",
+    quantity: 1,
+    orderDate: "2024-01-17 18:15",
     status: "Out for Delivery"
   }
 ];

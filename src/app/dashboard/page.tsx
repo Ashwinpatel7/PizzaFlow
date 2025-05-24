@@ -58,7 +58,7 @@ function DashboardContent() {
                   <dt className="text-sm font-medium text-gray-500 truncate">
                     Total Orders
                   </dt>
-                  <dd className="text-lg font-medium text-gray-900">24</dd>
+                  <dd className="text-lg font-medium text-gray-900">28</dd>
                 </dl>
               </div>
             </div>
@@ -78,7 +78,7 @@ function DashboardContent() {
                   <dt className="text-sm font-medium text-gray-500 truncate">
                     Delivered
                   </dt>
-                  <dd className="text-lg font-medium text-gray-900">18</dd>
+                  <dd className="text-lg font-medium text-gray-900">9</dd>
                 </dl>
               </div>
             </div>
@@ -135,7 +135,7 @@ function DashboardContent() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             <div className="text-center">
               <StatusBadge status="Pending" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">4 orders</p>
+              <p className="text-sm text-gray-600 mt-1">5 orders</p>
             </div>
             <div className="text-center">
               <StatusBadge status="Preparing" size="sm" showDot={false} />
@@ -143,11 +143,11 @@ function DashboardContent() {
             </div>
             <div className="text-center">
               <StatusBadge status="Out for Delivery" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">4 orders</p>
+              <p className="text-sm text-gray-600 mt-1">6 orders</p>
             </div>
             <div className="text-center">
               <StatusBadge status="Delivered" size="sm" showDot={false} />
-              <p className="text-sm text-gray-600 mt-1">8 orders</p>
+              <p className="text-sm text-gray-600 mt-1">9 orders</p>
             </div>
             <div className="text-center">
               <StatusBadge status="Cancelled" size="sm" showDot={false} />
