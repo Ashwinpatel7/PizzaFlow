@@ -202,19 +202,43 @@ export const mockPizzaOrders: PizzaOrder[] = [
   }
 ];
 
-export const getStatusColor = (status: PizzaOrder['status']) => {
+export const getStatusConfig = (status: PizzaOrder['status']) => {
   switch (status) {
     case 'Pending':
-      return 'bg-yellow-100 text-yellow-800';
+      return {
+        color: 'bg-amber-100 text-amber-800 border-amber-200',
+        icon: '⏳',
+        dotColor: 'bg-amber-400'
+      };
     case 'Preparing':
-      return 'bg-blue-100 text-blue-800';
+      return {
+        color: 'bg-blue-100 text-blue-800 border-blue-200',
+        icon: '👨‍🍳',
+        dotColor: 'bg-blue-400'
+      };
     case 'Out for Delivery':
-      return 'bg-purple-100 text-purple-800';
+      return {
+        color: 'bg-purple-100 text-purple-800 border-purple-200',
+        icon: '🚚',
+        dotColor: 'bg-purple-400'
+      };
     case 'Delivered':
-      return 'bg-green-100 text-green-800';
+      return {
+        color: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+        icon: '✅',
+        dotColor: 'bg-emerald-400'
+      };
     case 'Cancelled':
-      return 'bg-red-100 text-red-800';
+      return {
+        color: 'bg-red-100 text-red-800 border-red-200',
+        icon: '❌',
+        dotColor: 'bg-red-400'
+      };
     default:
-      return 'bg-gray-100 text-gray-800';
+      return {
+        color: 'bg-gray-100 text-gray-800 border-gray-200',
+        icon: '❓',
+        dotColor: 'bg-gray-400'
+      };
   }
 };

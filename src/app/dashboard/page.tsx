@@ -2,6 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { StatusBadge } from "@/app/components/StatusBadge";
 
 function DashboardContent() {
   const { data: session } = useSession();
@@ -120,6 +121,37 @@ function DashboardContent() {
                   <dd className="text-lg font-medium text-gray-900">2</dd>
                 </dl>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Status Overview */}
+      <div className="bg-white shadow rounded-lg">
+        <div className="px-4 py-5 sm:p-6">
+          <h3 className="text-lg leading-6 font-medium text-gray-900 mb-4">
+            Order Status Overview
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="text-center">
+              <StatusBadge status="Pending" size="sm" showDot={false} />
+              <p className="text-sm text-gray-600 mt-1">4 orders</p>
+            </div>
+            <div className="text-center">
+              <StatusBadge status="Preparing" size="sm" showDot={false} />
+              <p className="text-sm text-gray-600 mt-1">6 orders</p>
+            </div>
+            <div className="text-center">
+              <StatusBadge status="Out for Delivery" size="sm" showDot={false} />
+              <p className="text-sm text-gray-600 mt-1">4 orders</p>
+            </div>
+            <div className="text-center">
+              <StatusBadge status="Delivered" size="sm" showDot={false} />
+              <p className="text-sm text-gray-600 mt-1">8 orders</p>
+            </div>
+            <div className="text-center">
+              <StatusBadge status="Cancelled" size="sm" showDot={false} />
+              <p className="text-sm text-gray-600 mt-1">2 orders</p>
             </div>
           </div>
         </div>
