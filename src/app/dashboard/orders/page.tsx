@@ -102,7 +102,7 @@ export default function OrdersPage() {
             Pizza Orders
           </h2>
           <p className="mt-1 text-sm text-gray-500">
-            Manage and track all pizza orders ({filteredAndSortedOrders.length} orders)
+            Streamline your pizza order workflow ({filteredAndSortedOrders.length} orders)
           </p>
         </div>
       </div>

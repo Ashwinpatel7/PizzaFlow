@@ -1,6 +1,6 @@
-# Pizza Dashboard
+# PizzaFlow 🍕
 
-A modern, responsive pizza order management dashboard built with Next.js, TypeScript, Tailwind CSS, and NextAuth.js for Google OAuth authentication.
+A modern, intuitive pizza order management platform built with Next.js, TypeScript, Tailwind CSS, and NextAuth.js for Google OAuth authentication. Streamline your pizza business with PizzaFlow's elegant interface and powerful features.
 
 **Developer**: Ashwin Patel
 **Location**: India 🇮🇳

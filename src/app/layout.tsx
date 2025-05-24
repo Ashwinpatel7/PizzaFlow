@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pizza Dashboard",
-  description: "A modern pizza order management dashboard",
+  title: "PizzaFlow - Order Management",
+  description: "Streamline your pizza orders with PizzaFlow - the modern order management platform",
 };
 
 export default function RootLayout({

@@ -25,7 +25,7 @@ function DashboardContent() {
             <div className="ml-5 w-0 flex-1">
               <dl>
                 <dt className="text-sm font-medium text-gray-500 truncate">
-                  Welcome back
+                  Welcome to PizzaFlow
                 </dt>
                 <dd className="text-2xl font-bold text-gray-900">
                   Hello, {session.user?.name}!

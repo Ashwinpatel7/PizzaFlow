@@ -49,10 +49,10 @@ function SignInContent() {
             <span className="text-white text-3xl">🍕</span>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            Pizza Dashboard
+            PizzaFlow
           </h2>
           <p className="text-gray-600">
-            Sign in to continue
+            Sign in to manage your orders
           </p>
         </div>
 

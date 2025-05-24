@@ -59,7 +59,7 @@ function DashboardContent({
                 <div className="h-8 w-8 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-lg">🍕</span>
                 </div>
-                <span className="ml-2 text-xl font-bold text-gray-900">Pizza Dashboard</span>
+                <span className="ml-2 text-xl font-bold text-gray-900">PizzaFlow</span>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 {navigation.map((item) => (
