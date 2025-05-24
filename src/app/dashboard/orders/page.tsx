@@ -85,12 +85,12 @@ export default function OrdersPage() {
   };
 
   const statusOptions = [
-    { value: 'all', label: 'All Status' },
-    { value: 'Pending', label: 'Pending' },
-    { value: 'Preparing', label: 'Preparing' },
-    { value: 'Out for Delivery', label: 'Out for Delivery' },
-    { value: 'Delivered', label: 'Delivered' },
-    { value: 'Cancelled', label: 'Cancelled' },
+    { value: 'all', label: '🍕 All Status' },
+    { value: 'Pending', label: '🟡 Pending' },
+    { value: 'Preparing', label: '🔵 Preparing' },
+    { value: 'Out for Delivery', label: '🟣 Out for Delivery' },
+    { value: 'Delivered', label: '🟢 Delivered' },
+    { value: 'Cancelled', label: '🔴 Cancelled' },
   ];
 
   return (
@@ -151,10 +151,11 @@ export default function OrdersPage() {
 
       {/* Filters */}
       <div className="bg-white shadow rounded-lg p-6">
+        <h3 className="text-lg font-medium text-gray-900 mb-4">🔍 Search & Filter Orders</h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
-              Search Orders
+              🔎 Search Orders
             </label>
             <input
               type="text"
@@ -162,22 +163,22 @@ export default function OrdersPage() {
               placeholder="Search by customer, order ID, or pizza type..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
+              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm px-3 py-2"
             />
           </div>
 
           <div>
             <label htmlFor="status-filter" className="block text-sm font-medium text-gray-700 mb-2">
-              Filter by Status
+              🏷️ Filter by Status
             </label>
             <select
               id="status-filter"
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
+              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm px-3 py-2 bg-white"
             >
               {statusOptions.map((option) => (
-                <option key={option.value} value={option.value}>
+                <option key={option.value} value={option.value} className="py-2">
                   {option.label}
                 </option>
               ))}
@@ -192,9 +193,9 @@ export default function OrdersPage() {
                 setSortField('orderDate');
                 setSortDirection('desc');
               }}
-              className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+              className="w-full bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md"
             >
-              Clear Filters
+              🗑️ Clear Filters
             </button>
           </div>
         </div>
