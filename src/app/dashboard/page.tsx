@@ -3,7 +3,6 @@
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { StatusBadge } from "@/app/components/StatusBadge";
-import { mockPizzaOrders, getStatusConfig } from "@/lib/mockData";
 
 function DashboardContent() {
   const { data: session } = useSession();
